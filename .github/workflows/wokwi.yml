@@ -10,9 +10,15 @@ jobs:
       - name: Repo'yu klonla
         uses: actions/checkout@v3
 
-      - name: Wokwi CLI'yi yükle (resmi yöntemle)
+      - name: Wokwi CLI'yi indir ve hazırla
         run: |
-          curl -L https://wokwi.com/ci/install.sh | sh
+          curl -s https://api.github.com/repos/wokwi/wokwi-cli/releases/latest \
+          | grep "browser_download_url" \
+          | grep "linux" \
+          | cut -d '"' -f 4 \
+          | wget -i -
+          chmod +x wokwi-cli-*-linux
+          mv wokwi-cli-*-linux wokwi-cli
 
       - name: Simülasyonu çalıştır
         run: |
