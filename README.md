@@ -25,7 +25,7 @@ Bu proje, Arduino Uno kartı kullanılarak bir LED'in belirli aralıklarla yanı
 ## 🔌 Devre Şeması
 
 > `diagram.json` dosyasında Wokwi uyumlu devre şeması bulunmaktadır.  
-> İstersen doğrudan [Wokwi üzerinden simüle etmek için buraya tıklayabilirsin.](https://wokwi.com)
+> İstersen doğrudan [Wokwi üzerinden simüle etmek için buraya tıklayabilirsin.](https://wokwi.com/projects/426574228038427649)
 
 ---
 
