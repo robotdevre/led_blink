@@ -6,7 +6,7 @@ jobs:
   wokwi:
     runs-on: ubuntu-latest
     steps:
-      - name: Repo’yu klonla
+      - name: Repo'yu klonla
         uses: actions/checkout@v3
 
       - name: Wokwi CLI’yi kur
@@ -15,4 +15,4 @@ jobs:
 
       - name: Simülasyonu çalıştır
         run: |
-          wokwi-cli run --timeout 10000 --check "LED ON"
+          wokwi-cli run sketch.ino --timeout 10000 --check "LED ON"
