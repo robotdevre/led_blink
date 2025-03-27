@@ -1,3 +1,2 @@
-[project]
-name = "led_blink"
+[wokwi]
 diagram = "diagram.json"
