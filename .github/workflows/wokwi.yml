@@ -1,4 +1,4 @@
-name: Wokwi Simulation
+name: Wokwi CI
 
 on: [push]
 
@@ -10,11 +10,9 @@ jobs:
       - name: Repo'yu klonla
         uses: actions/checkout@v3
 
-      - name: Wokwi CLI'yi indir ve kur (x64 sabit link)
-        run: |
-          wget https://github.com/wokwi/wokwi-cli/releases/download/v0.15.3/wokwi-cli-linuxstatic-x64 -O wokwi-cli
-          chmod +x wokwi-cli
-
-      - name: Simülasyonu çalıştır
-        run: |
-          ./wokwi-cli run --timeout 10000 --check "LED ON" --project diagram.json
+      - name: Wokwi ile test et
+        uses: wokwi/wokwi-ci-action@v1
+        with:
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+          path: .  # wokwi.toml dosyası bu klasördeyse
+          expect_text: 'LED ON'  # Seri çıktıda beklenen yazı
