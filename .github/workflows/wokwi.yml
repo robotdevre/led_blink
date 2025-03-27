@@ -5,14 +5,15 @@ on: [push]
 jobs:
   wokwi:
     runs-on: ubuntu-latest
+
     steps:
       - name: Repo'yu klonla
         uses: actions/checkout@v3
 
-      - name: Wokwi CLI’yi kur
+      - name: Wokwi CLI'yi yükle (resmi yöntemle)
         run: |
-          npm install -g wokwi-cli
+          curl -L https://wokwi.com/ci/install.sh | sh
 
       - name: Simülasyonu çalıştır
         run: |
-          wokwi-cli run --timeout 10000 --check "LED ON" --project diagram.json
+          ./wokwi-cli run --timeout 10000 --check "LED ON" --project diagram.json
