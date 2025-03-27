@@ -49,8 +49,6 @@ void loop() {
 
 ## 📫 İletişim
 
-## 📬 İletişim
-
 Proje hakkında sorularınız veya önerileriniz varsa benimle iletişime geçebilirsiniz:
 
 - 📧 [E-posta](mailto:info@robotdevre.com)
