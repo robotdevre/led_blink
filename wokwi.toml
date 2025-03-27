@@ -1,4 +1,3 @@
 [wokwi]
 version = 1
-diagram = "diagram.json"
-firmware = "sketch.ino"
+firmware = "build/led_blink.ino.hex"
