@@ -2,6 +2,9 @@
 const int ledPin = 13;  
 
 void setup() {
+  Serial.begin(9600);
+  delay(100); // Bazı durumlarda gerekli
+  Serial.println("LED ON");
   // 13. pini çıkış (OUTPUT) olarak ayarlıyoruz
   pinMode(ledPin, OUTPUT);
 }
