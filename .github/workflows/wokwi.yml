@@ -11,8 +11,8 @@ jobs:
 
       - name: Wokwi CLI’yi kur
         run: |
-          npm install -g @wokwi/cli
+          npm install -g wokwi-cli
 
       - name: Simülasyonu çalıştır
         run: |
-          wokwi-cli run sketch.ino --timeout 10000 --check "LED ON"
+          wokwi-cli run --timeout 10000 --check "LED ON" --project diagram.json
