@@ -47,10 +47,17 @@ void loop() {
 ``` 
 ---
 
-## 📫 İletişim
+## 📫 Benimle İletişime Geç / Takip Et
+Eğer proje hakkında bir fikrin varsa, soruların olursa ya da sadece selam vermek istersen; aşağıdaki kanallardan bana ulaşabilir ya da sosyal medya hesaplarımdan takip edebilirsin:
 
-Proje hakkında sorularınız veya önerileriniz varsa benimle iletişime geçebilirsiniz:
+📧 E-posta
 
-- 📧 [E-posta](mailto:info@robotdevre.com)
-- 📷 [Instagram](https://www.instagram.com/robotdevre/)
+📷 Instagram
 
+🌐 Web Sitesi
+
+🎥 YouTube
+
+💼 LinkedIn
+
+🐦 X (Twitter)
