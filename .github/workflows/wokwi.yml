@@ -10,9 +10,25 @@ jobs:
       - name: Repo'yu klonla
         uses: actions/checkout@v3
 
+      - name: Arduino CLI'yi yükle
+        run: |
+          mkdir -p ~/.arduino15
+          curl -fsSL https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz | tar xz
+          sudo mv arduino-cli /usr/local/bin/
+
+      - name: Kart tanımını ekle (Arduino Uno için)
+        run: |
+          arduino-cli config init
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+
+      - name: Derleme (Hex dosyasını oluştur)
+        run: |
+          arduino-cli compile --fqbn arduino:avr:uno --output-dir build
+
       - name: Wokwi ile test et
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          path: .  # wokwi.toml dosyası bu klasördeyse
-          expect_text: 'LED ON'  # Seri çıktıda beklenen yazı
+          path: .
+          expect_text: "LED ON"
